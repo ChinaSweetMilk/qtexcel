@@ -24,7 +24,6 @@ QString    pCell->setProperty("Value", strvalue);
 
 
 以下是一次读取工作表全部内容的方法：
-
 void ExcelOperator::readAll(QList<QList<QVariant> > &res)
 {
     QVariant var;
@@ -142,7 +141,4 @@ QString ExcelOperator::to26AlphabetString(int idata)
     QChar ch = idata + 0x40; // A对应0x41
     return QString(ch);
 }
-
-
-一、简单应用demo
 
