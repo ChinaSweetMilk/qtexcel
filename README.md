@@ -22,7 +22,6 @@ QString    pCell->setProperty("Value", strvalue);
 QAxObject* pCell = m_pWorksheet->querySubObject("Range(QString)", strnumber);
 QString    pCell->setProperty("Value", strvalue);
 
-读取单个单元格内容时，可以使用以上方法，一秒大概能读写200行左右。但是需要大量读写单元格时，以上方法将会变得十分缓慢，所以这时需要用到QVariant，一次读取或写入整个工作表。采用以下方法，能将效率大大提高，一万行大概500毫秒。这个版本还没采用多线程读写，后面加入效率还可以提高。
 
 以下是一次读取工作表全部内容的方法：
 
